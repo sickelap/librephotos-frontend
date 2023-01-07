@@ -10,8 +10,6 @@ When(/^I enter "([^"]*)" to username field$/, (username: string) => loginPage.en
 
 When(/^I enter "([^"]*)" to password field$/, (password: string) => loginPage.enterPassword(password));
 
-Given(/^I am logged in as admin$/, () => loginPage.login("admin", "admin"));
-
 When(/^I click Login button$/, () => loginPage.clickLoginButton());
 
 Given(/^I navigate to login page$/, () => loginPage.visit());

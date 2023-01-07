@@ -29,11 +29,13 @@ export class LoginPage extends CommonActions {
     this.pressButton("Login");
   }
 
-  login(username: string, password: string) {
-    this.visit();
-    this.isActivePage();
-    this.enterUsername(username);
-    this.enterPassword(password);
-    this.pressButton("Login");
+  formLogin(username: string, password: string) {
+    cy.session([username, password], () => {
+      this.visit();
+      this.isActivePage();
+      this.enterUsername(username);
+      this.enterPassword(password);
+      this.pressButton("Login");
+    });
   }
 }
