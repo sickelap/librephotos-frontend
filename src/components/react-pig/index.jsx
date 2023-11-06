@@ -254,7 +254,7 @@ export default class Pig extends Component {
             ? selectedItems.findIndex(selectedItem => selectedItem.id === item.id) >= 0
             : stateSelectedItems.includes(item)
         }
-        activeTileUrl={activeTileUrl}
+        activeTileUrl={activeTileUrl ?? ""}
         settings={this.settings}
         thumbnailSize={thumbnailSize}
         scrollSpeed={scrollSpeed}
@@ -343,6 +343,6 @@ Pig.propTypes = {
   updateGroups: PropTypes.func,
   updateItems: PropTypes.func,
   selectedItems: PropTypes.arrayOf(PropTypes.shape({})),
-  toprightoverlay: PropTypes.shape({}),
-  bottomleftoverlay: PropTypes.shape({}),
+  toprightoverlay: PropTypes.func,
+  bottomleftoverlay: PropTypes.func,
 };

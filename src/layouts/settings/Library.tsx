@@ -234,7 +234,7 @@ export function Library() {
                       ? `${t("settings.statusscanphotostrue")}(${statusPhotoScan.added}/${statusPhotoScan.to_add})`
                       : t("settings.statusscanphotosfalse")}
                   </Button>
-                  <Menu transition="pop" position="bottom-end" withinPortal>
+                  <Menu transitionProps={{ transition: "pop" }} position="bottom-end" withinPortal>
                     <Menu.Target>
                       <ActionIcon variant="filled" color="blue" size={36} className={classes.menuControl}>
                         <ChevronDown size="1rem" />

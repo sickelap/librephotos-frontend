@@ -298,7 +298,7 @@ function PhotoListViewComponent(props: Props) {
                   !route.location.pathname.startsWith("/deleted") && (
                     <SelectionActions
                       selectedItems={selectionState.selectedItems}
-                      albumID={params ? params.albumID : undefined}
+                      albumID={params?.albumID ?? ""}
                       title={title}
                       setAlbumCover={actionType => {
                         if (actionType === "person") {

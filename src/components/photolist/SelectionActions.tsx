@@ -38,7 +38,7 @@ type Props = {
   onShareAlbum: () => void;
   onAddToAlbum: () => void;
   title: string;
-  albumID: number;
+  albumID: string;
 };
 
 export function SelectionActions(props: Readonly<Props>) {
